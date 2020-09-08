@@ -11,3 +11,6 @@ build:
         - node --version
         - yarn --version
         - npm --version
+    only:
+    - external_pull_requests
+    
