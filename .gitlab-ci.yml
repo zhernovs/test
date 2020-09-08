@@ -11,6 +11,8 @@ build:
         - node --version
         - yarn --version
         - npm --version
-    only:
-    - external_pull_requests
+    rules:
+    # Run on Merge requests
+    - if: $CI_MERGE_REQUEST_IID    
+
     
