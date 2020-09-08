@@ -11,7 +11,8 @@ workflow:
     # Run this for release
     - if: '$CI_PIPELINE_SOURCE == "web"'
     # Run this for post-submit jobs
-    - if: '$CI_COMMIT_BRANCH == "master"'    
+    - if: '$CI_COMMIT_BRANCH == "master"'   
+    - if: $CI_EXTERNAL_PULL_REQUEST_IID
     
 stages: 
     - build
